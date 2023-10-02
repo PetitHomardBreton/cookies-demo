@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
 
 app.get('/panier', (req, res) => {
     console.log('Hello backend!');
+    
+    console.log(req.headers.cookie);
+    
+    
+    res.setHeader('set-cookie', ['hono=lulu;', 'capitale=paris;']);
 
     res.end();
 });
